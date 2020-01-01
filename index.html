@@ -7,40 +7,103 @@
     </head>
     <body>  
         <div class="container">
+            <h2>Welcome to BooKids!</h2>
+
+        <div class="flex-container">
             <div id="create-user-form">
-            <form>
+          
                 <h4>Create User</h4>
-                <label for="username"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="username" required>
+                <!-- <label for="username"><b>Username:</b></label> -->
+                <input type="text" placeholder="Enter Username" name="username" required></br>
             
-                <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email" required>
-            
-                <button type="submit">Sign Up</button>
-            </form>
+                <button id="create-user-btn" type="submit">Sign Up</button></br>
+           
+            </div>
+
+            <div id="or">
+                <label for="or"><b>OR</b></label>
             </div>
 
             <div id="login-form">
-            <form>
+           
                 <h4>Login</h4>
-                <label for="username"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="username" required>
+                <!-- <label for="username"><b>Username:</b></label> -->
+                <input type="text" placeholder="Enter Username" name="username" required></br>
             
-                <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email" required>
-            
-                <button type="submit">Login</button>
+                <button id="login-user-btn" type="submit">Login</button></form></br>
+         
+            </div>
+        </div>
+
+        <div id="bookModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <form id="content-form">
+                <h3>Book Details:</h3>
+                <label for="title"><b>Title:</b></label>
+                <input type="text" placeholder="Enter Title" name="title" required></br>
+
+                <label for="author"><b>Author:</b></label>
+                <input type="text" placeholder="Enter Author" name="author" required></br>
+
+                <label for="cover"><b>Cover URL:</b></label>
+                <input type="text" placeholder="Enter Cover URL" name="cover" required></br>
+
+                <label for="status"><b>Select Status:</b></label>
+                <select>
+                    <option value="" disabled selected hidden>Select Status</option>
+                    <option value="Read">Read</option>
+                    <option value="Want to Read">Want to Read</option>
+                </select></br>
+
+                <label for="date-finished"><b>Date Finished:</b></label>
+                <input type="text" placeholder="Enter Date Finished" name="date"></br>
+
+                <label for="notes"><b>Notes:</b></label>
+                <input type="text" placeholder="Enter Notes" name="notes"></br>
+
+                <button type="submit">Edit Book</button></form></br>
+                
+              </form>
+            </div>
+          </div>
+
+            <div id="add-new-book">
+            <form id="add-book">
+                <h3>Add New Book:</h3>
+                <label for="title"><b>Title:</b></label>
+                <input type="text" placeholder="Enter Title" name="title" required></br>
+
+                <label for="author"><b>Author:</b></label>
+                <input type="text" placeholder="Enter Author" name="author" required></br>
+
+                <label for="cover"><b>Cover URL:</b></label>
+                <input type="text" placeholder="Enter Cover URL" name="cover" required></br>
+
+                <label for="status"><b>Select Status:</b></label>
+                <select>
+                    <option value="" disabled selected hidden>Select Status</option>
+                    <option value="Read">Read</option>
+                    <option value="Want to Read">Want to Read</option>
+                </select></br>
+
+                <label for="date-finished"><b>Date Finished:</b></label>
+                <input type="text" placeholder="Enter Date Finished" name="date"></br>
+
+                <label for="notes"><b>Notes:</b></label>
+                <input type="text" placeholder="Enter Notes" name="notes"></br>
+
+                <button type="submit">Add Book</button></form></br>
             </form>
             </div>
 
             <div id="my-books">
-            <h2>My Books</h2>
                 
                  
-                </div>
             </div>
 
         </div>
+        <script src="modal.js"></script>
         <script src="index.js"></script>
     </body>
 </html>

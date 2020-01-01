@@ -1,110 +1,131 @@
+h2 {
+    text-align: center;
+}
+
 img {
     width: 280px;
     height: 380px;
-    background: url(loading.gif) 50% no-repeat;
     border: 1px solid black;
     border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 50px; 
+    /* background: url(loading.gif) 50% no-repeat;  */
   }
 
+  form {
+    align-items: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 1px;
+    margin-right: 1px;
+    border: 1px solid darkgray; 
+    border-radius: 5px;
+    padding: 10px; 
+    background-color: #FFEFD5; */
+  }
 
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    display: inline-table;
+  }
 
-/* form {
-    border: 3px solid #f1f1f1;
-
+  #my-books {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .flex-container > div {
+    background-color: #f1f1f1;
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    width: 400px;
+    text-align: center;
+    line-height: 20px;
   }
 
   button {
-    background-color: #4CAF50;
+    background-color: peru;
     color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+    padding: 10px 30px;
+    margin: 7px; 
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 40%;
   }
 
-  /* .container {
-    padding: 16px;
-  } */
+  #or {
+      display: table-cell;
+      vertical-align: middle;
+  }
 
-  /* #wrapper
-{
- margin:0 auto;
- padding:0px;
- text-align:center;
- width:995px;
-} */
 
-  /* .container {
+  .container {
     position: relative;
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px 0 30px 0;
-  } */
-
-  /* input {
-    width: 50%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
   }
-  
-  input {
-    background-color: #ddd;
-    outline:;
-  } */
 
-  /* #create-user-form, #login-form
-{
-width:330px;
-margin-left:320px;
-padding:10px;
-background-color:#424949;
-}
 
-#create-user-form h2, #login-form h2
-{
-margin:15px;
-margin-bottom:30px;
-font-size:25px;
-font-weight:bold;
-color:white;
-text-decoration:underline;
-}
 
 #create-user-form input[type="text"]
 {
-width:230px;
-height:40px;
+width:220px;
+height:30px;
 border-radius:2px;
-font-size:17px;
-padding-left:5px;
+font-size:16px;
+padding-left:7px;
 border:none;
-}
-#create-user-form input[type="submit"]
+} 
+
+#login-form input[type="text"]
 {
-width:230px;
-height:40px;
-border:none;
+width:220px;
+height:30px;
 border-radius:2px;
-font-size:17px;
-background-color:#7F8C8D;
-border-bottom:3px solid #616A6B;
-color:white;
-font-weight:bold;
+font-size:16px;
+padding-left:7px;
+border:none;
+} 
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-#login-form input[type="submit"]
-{
-width:230px;
-height:40px;
-border:none;
-border-radius:2px;
-font-size:17px;
-background-color:#7F8C8D;
-border-bottom:3px solid #616A6B;
-color:white;
-font-weight:bold;
-} */ */
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
