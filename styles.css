@@ -129,3 +129,11 @@ border:none;
   text-decoration: none;
   cursor: pointer;
 }
+
+#active-user {
+  display: none;
+}
+
+#add-new-book {
+  display: none;
+}

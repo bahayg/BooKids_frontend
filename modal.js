@@ -1,6 +1,6 @@
 // Get the modal
-var modal = document.getElementById("myModal");
-let editedNode = null;
+var modal = document.getElementById("bookModal");
+let updatedBook = null;
 
 // Get the button that opens the modal
 // var btn = document.getElementById("myBtn");
@@ -9,7 +9,7 @@ let editedNode = null;
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-// btn.onclick = function() {
+// img.onclick = function() {
 //   modal.style.display = "block";
 // };
 

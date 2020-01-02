@@ -9,30 +9,34 @@
         <div class="container">
             <h2>Welcome to BooKids!</h2>
 
-        <div class="flex-container">
-            <div id="create-user-form">
+        <div id="user-container" class="flex-container">
+            <form id="create-user-form">
           
                 <h4>Create User</h4>
                 <!-- <label for="username"><b>Username:</b></label> -->
-                <input type="text" placeholder="Enter Username" name="username" required></br>
+                <input id="signup-field" type="text" placeholder="Enter Username" name="username" required></br>
             
                 <button id="create-user-btn" type="submit">Sign Up</button></br>
            
-            </div>
+            </form>
 
             <div id="or">
                 <label for="or"><b>OR</b></label>
             </div>
 
-            <div id="login-form">
+            <form id="login-form">
            
                 <h4>Login</h4>
                 <!-- <label for="username"><b>Username:</b></label> -->
-                <input type="text" placeholder="Enter Username" name="username" required></br>
+                <input id="login-field" type="text" placeholder="Enter Username" name="username" required></br>
             
                 <button id="login-user-btn" type="submit">Login</button></form></br>
          
-            </div>
+            </form>
+        </div>
+
+        <div id="active-user">
+            
         </div>
 
         <div id="bookModal" class="modal">
@@ -41,28 +45,29 @@
               <form id="content-form">
                 <h3>Book Details:</h3>
                 <label for="title"><b>Title:</b></label>
-                <input type="text" placeholder="Enter Title" name="title" required></br>
+                <input type="text" placeholder="Enter Title" id="title" required></br>
 
                 <label for="author"><b>Author:</b></label>
-                <input type="text" placeholder="Enter Author" name="author" required></br>
+                <input type="text" placeholder="Enter Author" id="author" required></br>
 
                 <label for="cover"><b>Cover URL:</b></label>
-                <input type="text" placeholder="Enter Cover URL" name="cover" required></br>
+                <input type="text" placeholder="Enter Cover URL" id="cover" required></br>
 
                 <label for="status"><b>Select Status:</b></label>
-                <select>
+                <select id="status">
                     <option value="" disabled selected hidden>Select Status</option>
                     <option value="Read">Read</option>
                     <option value="Want to Read">Want to Read</option>
                 </select></br>
 
                 <label for="date-finished"><b>Date Finished:</b></label>
-                <input type="text" placeholder="Enter Date Finished" name="date"></br>
+                <input type="text" placeholder="Enter Date Finished" id="date"></br>
 
                 <label for="notes"><b>Notes:</b></label>
-                <input type="text" placeholder="Enter Notes" name="notes"></br>
+                <input type="text" placeholder="Enter Notes" id="notes"></br>
 
-                <button type="submit">Edit Book</button></form></br>
+                <button type="submit" id="edit-btn" value="Update">Edit Book</button></br>
+                <button id="delete-btn" value="Delete">Delete Book</button></br>
                 
               </form>
             </div>
