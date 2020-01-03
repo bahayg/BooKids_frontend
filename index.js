@@ -100,7 +100,7 @@ function bookCard(book) {
 }
 
 
-  function populatedContentForm(book) {console.log(book)
+  function populatedContentForm(book) {
       const contentForm = document.querySelector("#content-form");
       contentForm.querySelector("#title").value = book.title;
       contentForm.querySelector("#author").value = book.author;
@@ -138,7 +138,8 @@ function updateBook(book) {
 
 }
 
-function deleteBook(bookId) { console.log(bookId)
+function deleteBook(bookId) { 
+  // console.log(bookId)
   fetch(`http://localhost:3000/books/${bookId}`, {
   method: "DELETE",
 })
@@ -206,12 +207,13 @@ function createUser () {
     function currentUser(name) { 
       const currentUser = document.getElementById("active-user")
       currentUser.style.display = "block"
+      welcome.style.display = "none"
 
       const div = document.createElement("div")
       div.id = "welcome-user"
 
       let nameArea = document.createElement("p")
-      nameArea.textContent = `Welcome ${name}`
+      nameArea.textContent = `Welcome to BooKids ${name}!`
 
       let signOut = document.createElement("button")
       signOut.textContent = "Logout"
@@ -257,19 +259,6 @@ function createUser () {
       })
     })
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // const addBtn = document.querySelector('#new-toy-btn')

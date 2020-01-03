@@ -1,5 +1,7 @@
-h2 {
+#welcome {
     text-align: center;
+    color: rgb(61, 92, 13);
+    display: block;
 }
 
 img {
@@ -14,21 +16,39 @@ img {
   }
 
   form {
-    align-items: left;
+    align-items: center;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 1px;
     margin-right: 1px;
-    border: 1px solid darkgray; 
+    border: 1px solid rgb(116, 112, 112); 
     border-radius: 5px;
     padding: 10px; 
-    background-color: #FFEFD5; */
+    background-color: rgb(223, 126, 74);
+    color:rgb(61, 92, 13);
+  }
+
+  #add-book {
+    margin-right: 50%;
+  }
+
+  #user-container {
+    text-align: center;
+  }
+
+  #active-user p {
+    color:rgb(61, 92, 13);
+    font-size: 36px;
+    font-weight: 500;
+    text-align: center;
   }
 
   .flex-container {
+    justify-content: space-between;
     display: flex;
     flex-direction: row;
     display: inline-table;
+    width: 79vw;
   }
 
   #my-books {
@@ -46,19 +66,30 @@ img {
     line-height: 20px;
   }
 
-  button {
-    background-color: peru;
+  #create-user-btn {
+    background-color: rgb(63, 179, 205);
     color: white;
     padding: 10px 30px;
     margin: 7px; 
     border: none;
     cursor: pointer;
-    width: 40%;
+    width: 50%;
+  }
+
+  #login-user-btn {
+    background-color: rgb(63, 179, 205);
+    color: white;
+    padding: 10px 30px;
+    margin: 7px; 
+    border: none;
+    cursor: pointer;
+    width: 50%;
   }
 
   #or {
       display: table-cell;
       vertical-align: middle;
+      color: rgb(61, 92, 13);
   }
 
 
@@ -69,7 +100,16 @@ img {
     padding: 20px 0 30px 0;
   }
 
-
+  #add-book input[type="text"]
+  {
+  width:220px;
+  height:30px;
+  border-radius:2px;
+  font-size:16px;
+  padding-left:7px;
+  margin-right: 10%;
+  border:none;
+  } 
 
 #create-user-form input[type="text"]
 {
@@ -80,6 +120,7 @@ font-size:16px;
 padding-left:7px;
 border:none;
 } 
+
 
 #login-form input[type="text"]
 {
@@ -112,7 +153,7 @@ border:none;
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 40%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
