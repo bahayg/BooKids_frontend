@@ -7,6 +7,15 @@
     </head>
     <body>  
         <div class="container">
+            <img id="bookshelf" src="images/bookshelf.png">
+            <img id="bookshelf" src="images/bookshelf.png">
+            <img id="bookshelf" src="images/bookshelf.png">
+            <img id="bookshelf" src="images/bookshelf.png">
+            <img id="bookshelf" src="images/bookshelf.png">
+            <img id="bookshelf" src="images/bookshelf.png">
+            <img id="bookshelf" src="images/bookshelf.png">
+            <img id="bookshelf" src="images/bookshelf.png">
+            <img id="bookshelf" src="images/bookshelf.png">
             <h1 id="welcome">Welcome to BooKids!</h1>
 
         <div id="user-container" class="flex-container">
@@ -14,7 +23,7 @@
           
                 <h4>Create User</h4>
                 <!-- <label for="username"><b>Username:</b></label> -->
-                <input id="signup-field" type="text" placeholder="Enter Username" name="username" size="30" required></br>
+                <input id="signup-field" type="text" placeholder="Enter Username" name="username" size="30" required autocomplete="off"></br>
             
                 <button id="create-user-btn" type="submit">Sign Up</button></br>
            
@@ -28,7 +37,7 @@
            
                 <h4>Login</h4>
                 <!-- <label for="username"><b>Username:</b></label> -->
-                <input id="login-field" type="text" placeholder="Enter Username" name="username" size="30" required></br>
+                <input id="login-field" type="text" placeholder="Enter Username" name="username" size="30" required autocomplete="off"></br>
             
                 <button id="login-user-btn" type="submit">Login</button></form></br>
          
@@ -45,13 +54,13 @@
               <form id="content-form">
                 <h3>Book Details:</h3>
                 <label for="title"><b>Title:</b></label>
-                <input type="text" placeholder="Enter Title" id="title" size="30" equired></br>
+                <input type="text" placeholder="Enter Title" id="title" size="30" required autocomplete="off"></br>
 
                 <label for="author"><b>Author:</b></label>
-                <input type="text" placeholder="Enter Author" id="author" size="30" required></br>
+                <input type="text" placeholder="Enter Author" id="author" size="30" required autocomplete="off"></br>
 
                 <label for="cover"><b>Cover URL:</b></label>
-                <input type="text" placeholder="Enter Cover URL" id="cover" size="30" required></br>
+                <input type="text" placeholder="Enter Cover URL" id="cover" size="30" required autocomplete="off"></br>
 
                 <label for="status"><b>Select Status:</b></label>
                 <select id="status">
@@ -61,12 +70,12 @@
                 </select></br>
 
                 <label for="date-finished"><b>Date Finished:</b></label>
-                <input type="text" placeholder="Enter Date Finished" id="date" size="30"></br>
+                <input type="text" placeholder="Enter Date Finished" id="date" size="30" autocomplete="off"></br>
 
                 <label for="notes"><b>Notes:</b></label>
-                <input type="text" placeholder="Enter Notes" id="notes" size="30"></br>
+                <input type="text" placeholder="Enter Notes" id="notes" size="30" autocomplete="off"></br>
 
-                <button type="submit" id="edit-btn" value="Update">Edit Book</button></br>
+                <button type="submit" id="edit-btn" value="Update">Edit Book</button>
                 <button id="delete-btn" value="Delete">Delete Book</button></br>
                 
               </form>
@@ -96,14 +105,13 @@
                 <input type="text" placeholder="Enter Date Finished" name="date" size="30"></br>
 
                 <label for="notes"><b>Notes:</b></label>
-                <input type="text" placeholder="Enter Notes" name="notes" size="30"></br>
+                <input type="text" placeholder="Enter Notes" name="notes" size="30" autocomplete="off"></br>
 
                 <button type="submit">Add Book</button></form></br>
             </form>
             </div>
 
-            <div id="my-books">
-                
+            <div id="my-books">               
                  
             </div>
 

@@ -5,7 +5,6 @@ let currentBookId = null;
 createUser()
 loginUser()
 
-
 document.addEventListener("DOMContentLoaded", function() {
   const addBook = document.querySelector("#add-book")
   addBook.addEventListener("submit", function(event) {
@@ -149,7 +148,7 @@ function deleteBook(bookId) {
 }
 
 
-
+// User Model
 
 function createUser () {
   let name = null;
@@ -217,9 +216,11 @@ function createUser () {
 
       let signOut = document.createElement("button")
       signOut.textContent = "Logout"
+      signOut.id = "signOut-btn"
 
       let deleteUser = document.createElement("button")
       deleteUser.textContent = "Delete my Account"
+      deleteUser.id = "delete-btn"
 
       div.appendChild(nameArea);
       div.appendChild(signOut);
@@ -259,14 +260,3 @@ function createUser () {
       })
     })
   }
-
-
-// const addBtn = document.querySelector('#new-toy-btn')
-//     const toyForm = document.querySelector('.container')
-//     addBtn.addEventListener('click', () => {
-//       // hide & seek with the form
-//       addToy = !addToy
-//       if (addToy) {
-//         toyForm.style.display = 'block'
-//       } else {
-//         toyForm.style.display = 'none'

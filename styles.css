@@ -1,7 +1,14 @@
+body {
+  background-color: rgb(172, 237, 236);
+  background-image: url(images/bookshelf.png);
+  background-position: repeat-y;
+}
+
 #welcome {
     text-align: center;
     color: rgb(61, 92, 13);
     display: block;
+    text-shadow: 5px 2px 4px grey;
 }
 
 img {
@@ -12,7 +19,16 @@ img {
     margin-bottom: 10px;
     margin-top: 10px;
     margin-right: 50px; 
-    /* background: url(loading.gif) 50% no-repeat;  */
+    background: url(loading.gif) 50% no-repeat; 
+  }
+
+  #bookshelf {
+    display: inline-block;
+    vertical-align: middle;
+    width:70px;
+    height: 55px;
+    border: none;
+    text-align: center;
   }
 
   form {
@@ -41,6 +57,7 @@ img {
     font-size: 36px;
     font-weight: 500;
     text-align: center;
+    text-shadow: 5px 2px 4px grey;
   }
 
   .flex-container {
@@ -57,7 +74,7 @@ img {
   }
   
   .flex-container > div {
-    background-color: #f1f1f1;
+    background-color: #e1d76a;
     margin: 5px;
     padding: 10px;
     font-size: 16px;
@@ -66,44 +83,42 @@ img {
     line-height: 20px;
   }
 
-  #create-user-btn {
-    background-color: rgb(63, 179, 205);
-    color: white;
-    padding: 10px 30px;
-    margin: 7px; 
-    border: none;
-    cursor: pointer;
+  #create-user-btn, #login-user-btn {
     width: 50%;
   }
 
-  #login-user-btn {
+  #signOut-btn, #delete-btn {
+    width: 30%;
+  }
+
+  button {
     background-color: rgb(63, 179, 205);
     color: white;
     padding: 10px 30px;
     margin: 7px; 
     border: none;
     cursor: pointer;
-    width: 50%;
+    width: 30%;
   }
 
   #or {
       display: table-cell;
       vertical-align: middle;
       color: rgb(61, 92, 13);
+      font-size: x-large;
   }
-
 
   .container {
     position: relative;
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: #e1d76a;
     padding: 20px 0 30px 0;
   }
 
   #add-book input[type="text"]
   {
-  width:220px;
-  height:30px;
+  width:300px;
+  height:26px;
   border-radius:2px;
   font-size:16px;
   padding-left:7px;
@@ -121,7 +136,6 @@ padding-left:7px;
 border:none;
 } 
 
-
 #login-form input[type="text"]
 {
 width:220px;
@@ -131,6 +145,12 @@ font-size:16px;
 padding-left:7px;
 border:none;
 } 
+
+#content-form input[type="text"] 
+{
+  width: 400px;
+  height:26px;
+}
 
 
 /* The Modal (background) */
@@ -149,11 +169,11 @@ border:none;
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
+  background-color: #e1ca86;
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 40%; /* Could be more or less, depending on screen size */
+  width: 50%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
@@ -177,4 +197,13 @@ border:none;
 
 #add-new-book {
   display: none;
+}
+
+#add-new-book {
+  display: none;
+}
+
+ul {
+  list-style-image: url(images/bookshelf.png);
+  list-style-position: inside;
 }
