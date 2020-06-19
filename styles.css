@@ -1,6 +1,6 @@
 body {
   background-color: rgb(172, 237, 236);
-  background-image: url(images/bookshelf.png);
+  background-image: url(images/bookshelf.png); 
   background-position: repeat-y;
 }
 
@@ -23,12 +23,18 @@ img {
   }
 
   #bookshelf {
-    display: inline-block;
     vertical-align: middle;
     width:70px;
-    height: 55px;
+    height: 65px;
+    margin: 26px;
     border: none;
-    text-align: center;
+  }
+
+  .container {
+    position: relative;
+    border-radius: 5px;
+    background-color: #e1d76a;
+    padding: 20px 0px 30px 0px;
   }
 
   form {
@@ -71,6 +77,7 @@ img {
   #my-books {
     display: flex;
     flex-wrap: wrap;
+    margin: 10px 70px 10px 80px;
   }
   
   .flex-container > div {
@@ -108,13 +115,6 @@ img {
       font-size: x-large;
   }
 
-  .container {
-    position: relative;
-    border-radius: 5px;
-    background-color: #e1d76a;
-    padding: 20px 0 30px 0;
-  }
-
   #add-book input[type="text"]
   {
   width:300px;
@@ -132,7 +132,7 @@ width:220px;
 height:30px;
 border-radius:2px;
 font-size:16px;
-padding-left:7px;
+padding-left:8px;
 border:none;
 } 
 
@@ -142,7 +142,7 @@ width:220px;
 height:30px;
 border-radius:2px;
 font-size:16px;
-padding-left:7px;
+padding-left:8px;
 border:none;
 } 
 
@@ -192,10 +192,6 @@ border:none;
 }
 
 #active-user {
-  display: none;
-}
-
-#add-new-book {
   display: none;
 }
 
