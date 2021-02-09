@@ -162,19 +162,18 @@ function createUser() {
       body: JSON.stringify({
         username: e.target[0].value,
       }),
-    })
-      .then((res) => res.json())
-      .then((json) => {
-        localStorage.setItem("user_id", json["id"]);
-        let signupField = document.getElementById("signup-field");
-        signupField.value = "";
-        let userContainer = document.getElementById("user-container");
-        userContainer.style.display = "none";
-        let addBookForm = document.getElementById("add-new-book");
-        addBookForm.style.display = "block";
-        currentUser(name);
-        getBooks(localStorage.getItem("user_id"));
-      });
+    }).then((res) => res.json());
+    swal("Your account is created!", { icon: "success" }).then((json) => {
+      localStorage.setItem("user_id", json["id"]);
+      let signupField = document.getElementById("signup-field");
+      signupField.value = "";
+      let userContainer = document.getElementById("user-container");
+      userContainer.style.display = "none";
+      let addBookForm = document.getElementById("add-new-book");
+      addBookForm.style.display = "block";
+      currentUser(name);
+      getBooks(localStorage.getItem("user_id"));
+    });
   });
 }
 
@@ -187,16 +186,22 @@ function loginUser() {
     fetch(`http://localhost:3000/users/${name}`)
       .then((resp) => resp.json())
       .then((json) => {
-        localStorage.clear();
-        localStorage.setItem("user_id", json["id"]);
-        let loginField = document.getElementById("login-field");
-        loginField.value = "";
-        let userContainer = document.getElementById("user-container");
-        userContainer.style.display = "none";
-        let addBookForm = document.getElementById("add-new-book");
-        addBookForm.style.display = "block";
-        currentUser(name);
-        getBooks(localStorage.getItem("user_id"));
+        if (json) {
+          localStorage.clear();
+          localStorage.setItem("user_id", json["id"]);
+          let loginField = document.getElementById("login-field");
+          loginField.value = "";
+          let userContainer = document.getElementById("user-container");
+          userContainer.style.display = "none";
+          let addBookForm = document.getElementById("add-new-book");
+          addBookForm.style.display = "block";
+          currentUser(name);
+          getBooks(localStorage.getItem("user_id"));
+        } else {
+          swal("Try again...", {
+            icon: "error",
+          });
+        }
       });
   });
 }
@@ -256,7 +261,9 @@ function currentUser(name) {
       let addBookForm = document.getElementById("add-new-book");
       addBookForm.style.display = "none";
       localStorage.clear();
-      alert("User deleted");
+      swal("You account has been deleted!", {
+        icon: "success",
+      });
     });
   });
 }
