@@ -9,6 +9,7 @@ body {
   color: rgb(61, 92, 13);
   display: block;
   text-shadow: 5px 2px 4px grey;
+  font-size: 60px;
 }
 
 img {
@@ -34,7 +35,7 @@ img {
   position: relative;
   border-radius: 5px;
   background-color: #e1d76a;
-  padding: 20px 0px 30px 0px;
+  padding: 20px 0px 20px 0px;
 }
 
 form {
@@ -56,6 +57,7 @@ form {
 
 #user-container {
   text-align: center;
+  margin-top: 40px;
 }
 
 #active-user p {
@@ -136,6 +138,14 @@ button {
   border: none;
 }
 
+#create-user-form {
+  margin-left: 50px;
+}
+
+#login-form {
+  margin-right: 50px;
+}
+
 #login-form input[type="text"] {
   width: 220px;
   height: 30px;
@@ -199,4 +209,29 @@ button {
 ul {
   list-style-image: url(images/bookshelf.png);
   list-style-position: inside;
+}
+
+#dropdown {
+  display: none;
+}
+
+.dropdown-menu {
+  margin-right: 70px;
+}
+
+.swal-button {
+  padding: 7px 19px;
+  min-width: 80px;
+  border-radius: 2px;
+  font-size: 14px;
+}
+
+.swal-text {
+  background-color: #fefae3;
+  padding: 17px;
+  border: 1px solid #f0e1a1;
+  display: block;
+  margin: 22px;
+  text-align: center;
+  color: #61534e;
 }

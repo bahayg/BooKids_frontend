@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <title>BooKids</title>
     </head>
     <body>  
@@ -47,7 +51,7 @@
         </div>
 
         <div id="active-user">
-            
+
         </div>
 
         <div id="bookModal" class="modal">
@@ -111,6 +115,20 @@
 
                 <button type="submit"><i class="bi bi-plus-square-fill"></i> Add Book</button></form></br>
             </form>
+            </div>
+
+            <div id="dropdown" class="dropdown">
+                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Filter By Status
+                </button>
+                <div id="dropdown-status" class="dropdown-menu" style="min-width: 300px;">
+                     <!-- <h3 class="dropdown-header">Status</h3> -->
+                     <button class="dropdown-item" style="max-width: 270px;" id="all" type="button">All Books</button>
+                     <button class="dropdown-item" style="max-width: 270px;" id="read" type="button">Read</button>
+                     <button class="dropdown-item" style="max-width: 270px;" id="not-read" type="button">Want to Read</button>
+                     <!-- <a class="dropdown-item" id="read" href="#">Read</a>
+                     <a class="dropdown-item" id="not-read" href="#">Want to Read</a> -->
+                </div>
             </div>
 
             <div id="my-books">               

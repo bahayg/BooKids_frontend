@@ -52,6 +52,7 @@ function getBooks(userId) {
         appendBook(book);
         bookIds.push(book.id);
       });
+      filterStatus(data);
     });
 }
 
@@ -146,6 +147,41 @@ function deleteBook(bookId) {
   });
 }
 
+// Filter by Status
+
+function filterStatus(books) {
+  let filterBtn = document.getElementById("dropdown");
+  filterBtn.style.display = "block";
+
+  let readBooks = books.filter((book) => book.status === "Read");
+  let notReadBooks = books.filter((book) => book.status === "Want to Read");
+  const filterRead = document.getElementById("read");
+  const filterNotRead = document.getElementById("not-read");
+  const showAll = document.getElementById("all");
+
+  showAll.addEventListener("click", function () {
+    const bookList = document.getElementById("my-books");
+    bookList.innerHTML = "";
+    books.forEach((book) => {
+      appendBook(book);
+    });
+  });
+  filterRead.addEventListener("click", function () {
+    const bookList = document.getElementById("my-books");
+    bookList.innerHTML = "";
+    readBooks.forEach((book) => {
+      appendBook(book);
+    });
+  });
+  filterNotRead.addEventListener("click", function () {
+    const bookList = document.getElementById("my-books");
+    bookList.innerHTML = "";
+    notReadBooks.forEach((book) => {
+      appendBook(book);
+    });
+  });
+}
+
 // User Model
 
 function createUser() {
@@ -163,7 +199,9 @@ function createUser() {
         username: e.target[0].value,
       }),
     }).then((res) => res.json());
-    swal("Your account is created!", { icon: "success" }).then((json) => {
+    swal("Your account is created!", {
+      icon: "success",
+    }).then((json) => {
       localStorage.setItem("user_id", json["id"]);
       let signupField = document.getElementById("signup-field");
       signupField.value = "";
@@ -242,6 +280,9 @@ function currentUser(name) {
     bookList.innerHTML = "";
     let addBookForm = document.getElementById("add-new-book");
     addBookForm.style.display = "none";
+    welcome.style.display = "block";
+    let filterBtn = document.getElementById("dropdown");
+    filterBtn.style.display = "none";
   });
 
   deleteUser.addEventListener("click", function () {
@@ -260,6 +301,9 @@ function currentUser(name) {
       bookList.innerHTML = "";
       let addBookForm = document.getElementById("add-new-book");
       addBookForm.style.display = "none";
+      welcome.style.display = "block";
+      let filterBtn = document.getElementById("dropdown");
+      filterBtn.style.display = "none";
       localStorage.clear();
       swal("You account has been deleted!", {
         icon: "success",
