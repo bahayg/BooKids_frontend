@@ -2,6 +2,19 @@ let booksURL = "http://localhost:3000/books";
 let usersURL = "http://localhost:3000/users";
 let currentBookId = null;
 
+// const userId = localStorage.getItem("user_id");
+// if (userId) {
+//   let userContainer = document.getElementById("user-container");
+//   userContainer.style.display = "none";
+//   let addBookForm = document.getElementById("add-new-book");
+//   addBookForm.style.display = "block";
+//   currentUser(name);
+//   getBooks(localStorage.getItem("user_id"));
+// } else {
+//   createUser();
+//   loginUser();
+// }
+
 createUser();
 loginUser();
 
@@ -135,7 +148,11 @@ function updateBook(book) {
     body: JSON.stringify(book),
   })
     .then((res) => res.json())
-    .then((data) => updatedBook.replaceWith(bookCard(data)));
+    .then(
+      (data) =>
+        document.getElementById(`book${book.id}`).replaceWith(bookCard(data))
+      // updatedBook.replaceWith(bookCard(data))
+    );
 }
 
 function deleteBook(bookId) {
