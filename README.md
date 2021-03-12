@@ -38,9 +38,15 @@ Vanilla JavaScript, Ruby, Ruby on Rails, ActiveRecord, SQLite3, HTML, CSS, local
 
 ## Links
 
-Watch the [Demo](https://youtu.be/JtTFuEnX0O0)
-
 Go to [Backend Repo](https://github.com/bahayg/BooKids_backend)
+
+Read the Blog Post: [Using Local Storage in JavaScript](https://medium.com/analytics-vidhya/using-local-storage-in-javascript-5cced3fd888d?source=friends_link&sk=5d85b7f4e96f19e6d2ac3f7dbb1dac02)
+
+Watch the Demo:
+
+[![Demo](BK_thumbnail.png)](https://youtu.be/JtTFuEnX0O0)
+
+<!-- Watch the [Demo](https://youtu.be/JtTFuEnX0O0) -->
 
 ## Support and Contact Details
 
